@@ -1,0 +1,104 @@
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #595959;
+  --line: #e2e2e2;
+  --link: #0b5cad;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --text: #ececec;
+    --muted: #a0a0a0;
+    --line: #2c2c2c;
+    --link: #7ab6f5;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a { color: var(--link); }
+
+header {
+  border-bottom: 1px solid var(--line);
+  padding: 20px 0;
+}
+
+header .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+nav a {
+  margin-right: 18px;
+  text-decoration: none;
+  color: var(--muted);
+}
+
+nav a:last-child { margin-right: 0; }
+nav a:hover { color: var(--link); text-decoration: underline; }
+
+main { padding: 40px 0 20px; }
+
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 1.25rem; margin: 48px 0 16px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+h3 { font-size: 1.05rem; margin: 0 0 4px; }
+
+.tagline { color: var(--muted); margin: 0 0 20px; }
+
+.project { margin-bottom: 28px; }
+.project p { margin: 4px 0; }
+.meta { color: var(--muted); font-size: 0.92rem; }
+
+.skills dt { font-weight: 600; margin-top: 10px; }
+.skills dd { margin: 0; color: var(--muted); }
+
+.entry { margin-bottom: 18px; }
+.entry p { margin: 2px 0; }
+
+ul { padding-left: 20px; margin: 6px 0; }
+
+img { max-width: 100%; height: auto; border: 1px solid var(--line); }
+figure { margin: 16px 0; }
+figcaption { color: var(--muted); font-size: 0.9rem; margin-top: 4px; }
+
+footer {
+  border-top: 1px solid var(--line);
+  margin-top: 48px;
+  padding: 20px 0 40px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.back { display: inline-block; margin-bottom: 20px; }
+
+@media print {
+  nav, footer { display: none; }
+  body { font-size: 12pt; }
+}
